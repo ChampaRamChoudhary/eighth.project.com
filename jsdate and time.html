@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time</title>
+
+    <style>
+        .container{
+            color: rgb(245, 5, 5);
+            background-color: #bb8ce8;
+            padding: 30px;
+            margin: 8px 380px;
+            border: 2px solid darkblue;    
+            border-radius: 99px;
+            font-size: 16px;
+        }
+    #sita{
+        font-size: larger;
+        font-weight: bolder;
+        color: darkgreen;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Hello, Welcome to the Ghantaghar,Jodhpur , now time is </h3>
+        <span id="sita"></span>
+
+    </div>
+
+    <script>
+        let nw=new Date();
+        console.log(nw);
+
+        let dt=new Date(0);
+        let dat=new Date(4000);
+        console.log(dt);
+        console.log(dat);
+
+        // let nd=new Date(year, month, date, hour, minutes, second);
+        let nd = new Date(2030, 4,26,8,34,46);
+        console.log(nd);
+
+       let yr = nd.getFullYear();
+       let date = nd.getDate();
+       let mt = nd.getMinutes();
+       let ms = nd.getMilliseconds();
+       console.log('The year is ',yr);
+       console.log('The date is ',date);
+       console.log('The minute is ',mt);
+       console.log('The millisecond is ',ms);
+
+       Date.now();
+
+       nd.setDate(28);
+       console.log(nd);
+       nd.setHours(5);
+       console.log(nd);
+
+       setInterval(updatetime, 1000);
+       function updatetime(){
+          sita.innerHTML=new Date();
+       }
+
+    </script>
+</body>
+</html>
